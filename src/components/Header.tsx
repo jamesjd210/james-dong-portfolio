@@ -45,7 +45,7 @@ const Header = () => {
           <li>
             <Link
               href="https://www.linkedin.com/in/james-dong-1024/"
-              className="hover:text-brown-600 px-3 py-3 flex text-lg"
+              className="hover:text-deepBlue-600 px-3 py-3 flex text-lg"
               target="_blank"
             >
               Linkedin
