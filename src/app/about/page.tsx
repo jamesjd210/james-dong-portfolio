@@ -1,4 +1,5 @@
 import Image from "next/image"
+import JamesImage from "@/public/Pictures/JamesDong.jpg"
 
 export default function About() {
     return (
@@ -17,11 +18,12 @@ export default function About() {
             <div className="mt-12 flex flex-col lg:flex-row items-center justify-between">
                 <div className="lg:w-1/2">
                 <Image
-                    src="/me.jpg" // Replace with your image
+                    src={JamesImage}
                     alt="James Dong"
-                    width={400}
-                    height={400}
-                    className="rounded-full mx-auto"
+                    width={300}
+                    height={600}
+                    className="rounded-3xl mx-auto"
+                    priority
                 />
                 </div>
                 <div className="lg:w-1/2 mt-8 lg:mt-0 lg:pl-12">
