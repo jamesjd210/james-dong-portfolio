@@ -1,6 +1,5 @@
 import Image from "next/image"
-import JamesImage from "@/public/Pictures/JamesDong.jpg"
-
+import JamesImage from "@/app/public/assets/Pictures/JamesDong.jpg"
 export default function About() {
     return (
         <section className="bg-background py-16 px-8 lg:px-24 text-foreground">
