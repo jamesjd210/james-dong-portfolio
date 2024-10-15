@@ -10,7 +10,7 @@ export default function About() {
                 About Me
                 </h1>
                 <p className="text-lg lg:text-xl text-brown-500 leading-relaxed">
-                Hi! I'm James Dong, a passionate developer specializing in web development. I love creating stunning and efficient applications that provide users with great experiences. Let me tell you a little more about my journey!
+                Hi! I&apos;m James Dong, a passionate developer specializing in web development. I love creating stunning and efficient applications that provide users with great experiences. Let me tell you a little more about my journey!
                 </p>
             </div>
 
@@ -29,7 +29,7 @@ export default function About() {
                 <div className="lg:w-1/2 mt-8 lg:mt-0 lg:pl-12">
                 <h2 className="text-3xl font-semibold mb-4 text-brown-700">A Little About Me</h2>
                 <p className="text-lg text-brown-500 leading-relaxed">
-                    I've always been fascinated with technology and solving problems through code. With a background in computer science and a strong desire to constantly learn, I've developed a deep expertise in JavaScript, React, Next.js, and TypeScript. Outside of work, I enjoy exploring new tech trends, hiking, and photography.
+                    I&apos;ve always been fascinated with technology and solving problems through code. With a background in computer science and a strong desire to constantly learn, I&apos;ve developed a deep expertise in JavaScript, React, Next.js, and TypeScript. Outside of work, I enjoy exploring new tech trends, hiking, and photography.
                 </p>
                 </div>
             </div>
@@ -67,9 +67,9 @@ export default function About() {
 
             {/* Call-to-Action Section */}
             <div className="mt-16 text-center">
-                <h2 className="text-3xl font-semibold text-brown-700 mb-4">Let's Connect</h2>
+                <h2 className="text-3xl font-semibold text-brown-700 mb-4">Let&apos;s Connect</h2>
                 <p className="text-lg text-brown-500 mb-6">
-                I'm always excited to work on new projects and collaborate with other developers. Feel free to reach out!
+                I&apos;m always excited to work on new projects and collaborate with other developers. Feel free to reach out!
                 </p>
                 <a
                 href="mailto:jamesjd1024@gmail.com"

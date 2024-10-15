@@ -132,7 +132,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4"> jamesdong.dev - James Dong's Personal Website</div>
+            <div className="text-gray-400 text-sm mr-4"> jamesdong.dev - James Dong&apos;s Personal Website</div>
 
           </div>
 
