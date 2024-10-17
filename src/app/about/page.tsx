@@ -1,5 +1,4 @@
 import Image from "next/image"
-import JamesImage from "@/app/public/assets/Pictures/JamesDong.jpg"
 export default function About() {
     return (
         <section className="bg-background py-16 px-8 lg:px-24 text-foreground">
@@ -17,7 +16,7 @@ export default function About() {
             <div className="mt-12 flex flex-col lg:flex-row items-center justify-between">
                 <div className="lg:w-1/2">
                 <Image
-                    src={JamesImage}
+                    src="/static/Pictures/JamesDong.jpg"
                     alt="James Dong"
                     width={300}
                     height={600}
