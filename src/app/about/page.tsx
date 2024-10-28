@@ -16,7 +16,7 @@ export default function About() {
             <div className="mt-12 flex flex-col lg:flex-row items-center justify-between">
                 <div className="lg:w-1/2">
                 <Image
-                    src="/static/Pictures/JamesDong.jpg"
+                    src="/static/pictures/JamesDong.jpg"
                     alt="James Dong"
                     width={300}
                     height={600}
