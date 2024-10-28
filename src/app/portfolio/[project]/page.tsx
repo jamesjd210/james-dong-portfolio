@@ -8,7 +8,6 @@ export default function ProjectDetailPage({ params }: { params: { project: strin
   const projectData = {
     title: "Example Project Title",
     description: "Detailed description of the project.",
-    // ...additional details
   };
 
   return (
