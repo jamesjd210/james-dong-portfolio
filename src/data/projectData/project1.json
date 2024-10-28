@@ -1,0 +1,7 @@
+{
+    "id": 1,
+    "name": "Project One",
+    "description": "A detailed description of Project One.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "repoLink": "https://example.com/project1"
+}
