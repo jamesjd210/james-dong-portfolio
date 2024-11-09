@@ -15,7 +15,7 @@ export default function ProjectHighlights({ projects, count }: ProjectsPageProps
             {projects.slice(0,count).map((project) => (
               <div key={project.id} className="bg-tan-500 p-6 rounded-lg shadow-lg">
                 <Image 
-                  src={project.imageUrl || "/default.jpg"} // Use default image if `imageUrl` is missing
+                  src={project.imageUrl || "/static/pictures/default.jpg"} // Use default image if `imageUrl` is missing
                   alt={project.name}
                   width={500}
                   height={300}
