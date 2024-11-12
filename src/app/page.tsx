@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { Project } from "@/types/Project"
 import { loadProjects } from "@/utils/loadProjects"; // function to load projects
