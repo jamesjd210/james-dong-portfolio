@@ -1,7 +1,9 @@
 {
     "id": 3,
-    "name": "Project Three",
+    "isFeatured": true,
+    "name": "Food Inventory Manager",
+    "blurb" : "Took advantage of XGBoost to forecast restaurant ingredient consumption. 2 Restaurants",
     "description": "A detailed description of Project Three.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "technologies": ["Python"],
     "repoLink": "https://example.com/project1"
 }

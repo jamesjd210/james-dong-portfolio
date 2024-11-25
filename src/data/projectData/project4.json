@@ -1,5 +1,6 @@
 {
     "id": 4,
+    "isFeatured": false,
     "name": "Project Four",
     "description": "A detailed description of Project Four.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
