@@ -16,6 +16,9 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-brown-700 md:text-4xl lg:text-5xl ">
             Hey there! My name is <br/> James Dong
           </h1>
+          <h2 className="text-3xl font-bold">
+            ATTENTION: This site is still in construction. Thanks!
+          </h2>
           <p className="mt-4 text-lg text-brown-500 md:text-xl">
             Welcome to my website! I&apos;m a passionate developer with a love for creating stunning web applications.
           </p>
