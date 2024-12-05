@@ -12,7 +12,10 @@ export default function ProjectHighlights({ projects, count }: ProjectsPageProps
     <section className="py-12">
         <h2 className="text-2xl font-semibold text-brown-700 text-center">Featured Projects</h2>
         <div className="mt-8 grid gap-8 md:grid-cols-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {projects.slice(0,count).map((project) => (
+            {projects
+            .filter((project : Project) => project.isFeatured)
+            .slice(0,count)
+            .map((project : Project) => (
               <div key={project.id} className="bg-tan-500 p-6 rounded-lg shadow-lg">
                 <Image 
                   src={project.imageUrl || "/static/pictures/default.jpg"} // Use default image if `imageUrl` is missing
@@ -25,7 +28,7 @@ export default function ProjectHighlights({ projects, count }: ProjectsPageProps
                   {project.name}
                 </h3>
                 <p className="mt-2 text-brown-500">
-                  {project.description}
+                  {project.blurb}
                 </p>
               </div>
             ))}

@@ -1,7 +1,9 @@
 {
     "id": 2,
-    "name": "Project Two",
-    "description": "A detailed description of Project Two.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
-    "repoLink": "https://example.com/project1"
+    "isFeatured": true,
+    "name" : "Oldboy Sim Racing",
+    "blurb" : "Took a deep dive into the world of CAD design and 3D printing to make affordable Sim Racing Accessories. 10k revenue generated",
+    "description" : "A detai",
+    "technologies" : ["Next.js", "TypeScript", "Tailwind CSS"],
+    "repoLink" : "https://example.com/project1"
 }

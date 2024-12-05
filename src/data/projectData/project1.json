@@ -1,7 +1,9 @@
 {
     "id": 1,
-    "name": "Project One",
+    "isFeatured": true,
+    "name": "Dropshipping Automation",
+    "blurb" : "Utilized React, Flask, and MongoDB to create a tool for automating the entire dropshipping process. 120k Revenue Generated.",
     "description": "A detailed description of Project One.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "technologies": ["Vite", "Flask", "MongoDB"],
     "repoLink": "https://example.com/project1"
 }
