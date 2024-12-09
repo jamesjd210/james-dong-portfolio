@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, SyntheticEvent, useEffect } from 'react';
 
 export default function Contact() {
+
+  function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
+
+  }
   return (
     <section className="bg-background py-12 px-6 md:py-16">
       <div className="max-w-4xl mx-auto text-center">
@@ -14,7 +18,7 @@ export default function Contact() {
 
       {/* Contact Form */}
       <div className="mt-8 max-w-xl mx-auto bg-tan-500 p-6 rounded-lg shadow-lg">
-        <form action="/contact-success" method="POST">
+        <form id="contact-form" action="/contact-success" method="POST" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-semibold text-brown-700">
               Name
