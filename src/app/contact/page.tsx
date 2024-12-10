@@ -1,10 +1,14 @@
+'use client'
 import React, { useState, SyntheticEvent, useEffect } from 'react';
+import { ContactForm } from '@/types/ContactForm.Model';
 
 export default function Contact() {
 
   function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
 
   }
+
+  const [formData, setFormData] = useState<ContactForm>();
   return (
     <section className="bg-background py-12 px-6 md:py-16">
       <div className="max-w-4xl mx-auto text-center">
