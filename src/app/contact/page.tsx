@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, SyntheticEvent, useEffect } from 'react';
+import React, { useState, SyntheticEvent } from 'react';
 import { ContactForm } from '@/types/ContactForm.Model';
 
 export default function Contact() {
