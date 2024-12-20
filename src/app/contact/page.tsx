@@ -30,7 +30,7 @@ export default function Contact() {
           Get in Touch
         </h1>
         <p className="mt-4 text-lg text-brown-500 md:text-xl">
-          Have questions, opportunities, or just want to say hello? Feel free to drop me a message!
+          Have something on your mind? Feel free to drop me a message!
         </p>
       </div>
 
