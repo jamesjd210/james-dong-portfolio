@@ -6,6 +6,7 @@ export default function Contact() {
 
   function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
     event.preventDefault();
+    setFormSubmitted(true);
     console.log(formData)
 
   }
@@ -16,6 +17,7 @@ export default function Contact() {
       ...previousData,
       [name] : value,
     }))
+    setFormSubmitted(false);
   }
 
   const [formData, setFormData] = useState<ContactForm>({
@@ -23,6 +25,8 @@ export default function Contact() {
     email :"",
     message : ""
   });
+
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false)
   return (
     <section className="bg-background py-12 px-6 md:py-16">
       <div className="max-w-4xl mx-auto text-center">
@@ -36,7 +40,7 @@ export default function Contact() {
 
       {/* Contact Form */}
       <div className="mt-8 max-w-xl mx-auto bg-tan-500 p-6 rounded-lg shadow-lg">
-        <form id="contact-form" action="/contact-success" method="POST" onSubmit={handleSubmit}>
+        <form id="contact-form" method="POST" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-semibold text-brown-700">
               Name
@@ -83,6 +87,18 @@ export default function Contact() {
             Send Message
           </button>
         </form>
+        <>
+          {
+            formSubmitted && (
+              <div className="text-center w-full mt-4">
+                <p className="font-bold">
+                  Thank you for reaching out! I&apos;ll get back to you soon!
+                </p>
+
+              </div>
+            )
+          }
+        </>
       </div>
     </section>
   );
