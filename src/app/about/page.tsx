@@ -58,7 +58,7 @@ export default function About() {
                 I&apos;m always excited to work on new projects and collaborate with other developers. Feel free to reach out!
                 </p>
                 <a
-                    href="mailto:jamesjd1024@gmail.com"
+                    href="/contact"
                     className="inline-block bg-deepBlue-500 text-white px-6 py-3 rounded-md font-semibold transition hover:bg-deepBlue-600"
                     >
                     Contact Me
