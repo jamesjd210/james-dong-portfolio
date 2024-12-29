@@ -1,14 +1,31 @@
 'use client'
 import React, { useState, SyntheticEvent } from 'react';
 import { ContactForm } from '@/types/ContactForm.Model';
+import dotenv from 'dotenv';
 
 export default function Contact() {
-
-  function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
+  dotenv.config({ path: [ ".dev.vars" ] })
+  async function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
     event.preventDefault();
-    setFormSubmitted(true);
-    console.log(formData)
-
+    // console.log(formData)
+    // console.log(process.env.ACCESS_KEY)
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method : "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+      },
+        body : JSON.stringify(formData)
+      })
+      const data = await response.json();
+      if (data.success) {
+        setFormSubmitted(true);
+      }
+    }
+    catch (err) {
+      console.error(err)
+    }
   }
 
   function handleInputChange(event : SyntheticEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -23,7 +40,8 @@ export default function Contact() {
   const [formData, setFormData] = useState<ContactForm>({
     name : "",
     email :"",
-    message : ""
+    message : "",
+    access_key : process.env.ACCESS_KEY ? process.env.ACCESS_KEY : "",
   });
 
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false)
