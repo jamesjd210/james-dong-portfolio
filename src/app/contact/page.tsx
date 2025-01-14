@@ -4,28 +4,28 @@ import { ContactForm } from '@/types/ContactForm.Model';
 import dotenv from 'dotenv';
 
 export default function Contact() {
-  dotenv.config({ path: [ ".dev.vars" ] })
+  dotenv.config();
   async function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
     event.preventDefault();
-    // console.log(formData)
-    // console.log(process.env.ACCESS_KEY)
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method : "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-      },
-        body : JSON.stringify(formData)
-      })
-      const data = await response.json();
-      if (data.success) {
-        setFormSubmitted(true);
-      }
-    }
-    catch (err) {
-      console.error(err)
-    }
+    console.log(formData)
+    console.log(process.env.ACCESS_KEY)
+    // try {
+    //   const response = await fetch("https://api.web3forms.com/submit", {
+    //     method : "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json",
+    //   },
+    //     body : JSON.stringify(formData)
+    //   })
+    //   const data = await response.json();
+    //   if (data.success) {
+    //     setFormSubmitted(true);
+    //   }
+    // }
+    // catch (err) {
+    //   console.error(err)
+    // }
   }
 
   function handleInputChange(event : SyntheticEvent<HTMLInputElement | HTMLTextAreaElement>) {
