@@ -1,13 +1,31 @@
 'use client'
 import React, { useState, SyntheticEvent } from 'react';
 import { ContactForm } from '@/types/ContactForm.Model';
+import dotenv from 'dotenv';
 
 export default function Contact() {
-
-  function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
+  dotenv.config();
+  async function handleSubmit(event : SyntheticEvent<HTMLFormElement | HTMLTextAreaElement>) {
     event.preventDefault();
     console.log(formData)
-
+    console.log(process.env.ACCESS_KEY)
+    // try {
+    //   const response = await fetch("https://api.web3forms.com/submit", {
+    //     method : "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json",
+    //   },
+    //     body : JSON.stringify(formData)
+    //   })
+    //   const data = await response.json();
+    //   if (data.success) {
+    //     setFormSubmitted(true);
+    //   }
+    // }
+    // catch (err) {
+    //   console.error(err)
+    // }
   }
 
   function handleInputChange(event : SyntheticEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -16,13 +34,17 @@ export default function Contact() {
       ...previousData,
       [name] : value,
     }))
+    setFormSubmitted(false);
   }
 
   const [formData, setFormData] = useState<ContactForm>({
     name : "",
     email :"",
-    message : ""
+    message : "",
+    access_key : process.env.ACCESS_KEY ? process.env.ACCESS_KEY : "",
   });
+
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false)
   return (
     <section className="bg-background py-12 px-6 md:py-16">
       <div className="max-w-4xl mx-auto text-center">
@@ -30,13 +52,13 @@ export default function Contact() {
           Get in Touch
         </h1>
         <p className="mt-4 text-lg text-brown-500 md:text-xl">
-          Have questions, opportunities, or just want to say hello? Feel free to drop me a message!
+          Have something on your mind? Feel free to drop me a message!
         </p>
       </div>
 
       {/* Contact Form */}
       <div className="mt-8 max-w-xl mx-auto bg-tan-500 p-6 rounded-lg shadow-lg">
-        <form id="contact-form" action="/contact-success" method="POST" onSubmit={handleSubmit}>
+        <form id="contact-form" method="POST" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-semibold text-brown-700">
               Name
@@ -83,6 +105,18 @@ export default function Contact() {
             Send Message
           </button>
         </form>
+        <>
+          {
+            formSubmitted && (
+              <div className="text-center w-full mt-4">
+                <p className="font-bold">
+                  Thank you for reaching out! I&apos;ll get back to you soon!
+                </p>
+
+              </div>
+            )
+          }
+        </>
       </div>
     </section>
   );
