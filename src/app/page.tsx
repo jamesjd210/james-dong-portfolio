@@ -20,7 +20,7 @@ export default function Home() {
             ATTENTION: This site is still in construction. Thanks!
           </h2>
           <p className="mt-4 text-lg text-brown-500 md:text-xl">
-            Welcome to my website! I&apos;m a passionate developer with a love for creating stunning web applications.
+            Welcome to my website! I&apos;m a passionate developer with a love for creating fully functional web applications.
           </p>
         </div>
       </section>
